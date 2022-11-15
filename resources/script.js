@@ -50,7 +50,7 @@ $sliderPickerList.querySelectorAll('.slider-picker-link').forEach((el, index) =>
 	}, true)
 });
 
-/* instantierea serice worker-ului */
+/* instanțierea service worker-ului */
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('service-worker.js');
 }
