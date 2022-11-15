@@ -91,6 +91,15 @@ a:hover {
 
 }
 
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 
 /***********************/
 
@@ -184,6 +193,10 @@ a:hover {
 
                 .label {
                     display: block;
+                    cursor: pointer;
+                    &:hover {
+                        color: #799900;
+                    }
                 }
                 
 
@@ -332,6 +345,7 @@ a:hover {
                     display: none;
                     &.active {
                         display: block;
+                        animation: fadeIn 0.5s ease-in-out both;
 
                     }
                 }
@@ -402,7 +416,7 @@ a:hover {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;  //items din flex sa se dispuna pe o linie
-                    max-width: 100vw;
+                    max-width: calc(100vw - 20px);
                     overflow: auto;
                     padding: 0 0 0 0.5rem;
                     margin: 0;
@@ -522,7 +536,7 @@ a:hover {
         .book-grid {
             display: block;
             padding: 1rem 0;
-            background: #f8f8f8;
+            background: rgba(166, 177, 126, .14);
         }
 
             .book-grid-title {
@@ -539,7 +553,7 @@ a:hover {
                 list-style-type: none;
                 @media (min-width: 650px) {
                     display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
                 }
 
             }
@@ -547,6 +561,15 @@ a:hover {
                 .book-grid-item {
                     display: block;
                     clear: both;
+                    position: relative;
+                    margin: 1rem 0;
+                    border-bottom: 1px solid #ddd;
+                    padding: 0 0 1rem 0;
+                    @media (min-width: 650px) {
+                        margin: 0;
+                        border-bottom: none;
+                        padding: 0;
+                    }
                 }
 
                     .book-grid-link {
@@ -559,6 +582,10 @@ a:hover {
                             background: white;
                             box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
                             position: relative;
+                            border-bottom: 2rem solid #eee;
+                        }
+                        &:hover {
+                            box-shadow: 0 0.5em 0.5em rgba(121, 153, 0, 0.5);
                         }
                     }
 
@@ -566,6 +593,7 @@ a:hover {
                             display: block;
                             width: 100%;
                             height: auto;
+                            margin-bottom: 1rem;
                             @media (min-width: 380px) {
                                 float: left;
                                 width: 33%;
@@ -587,11 +615,18 @@ a:hover {
                         .book-title {
                             display: block;
                             margin: 0.25rem 0;
+                            font-size: 1rem;
+                            line-height: 1.5em;
                         }
 
                         .book-author {
                             display: block;
                             margin: 0.25rem 0;
+                            color: #799900;
+                            font-weight: normal;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            line-height: 1.5em;
                         }
 
                         .book-description {
@@ -610,55 +645,341 @@ a:hover {
                             padding: 0.25rem 0.5rem;
                             background: #fff;
                             clear: both;
+                            font-size: 1.5rem;
+                            line-height: 1em;
+                            text-align: right;
                             @media (min-width: 650px){
                                 position: absolute;
-                                bottom: 0;
+                                bottom: -2rem;
                                 right: 0;
+                                text-align: left;
+                                background: transparent;
                             }
                         }
 
+                            
                             .price span span {
                                 display: inline-block;
+                                margin: 0 -0.25em;
                                 position: relative;
-                                top: -2px;
-                                font-size: 0.75rem;
+                                top: -0.25em;
+                                font-size: 0.6666em;
                                 border-bottom: 3px solid #eee;
                                 line-height: 1;
                                 
                             }
 
                         .availability {
-
+                            display: flex;
+                            position: absolute;
+                            margin-top: -2rem;
+                            @media (min-width: 650px) {
+                                left: 0;
+                                bottom: -2rem;
+                                margin-top: 0;
+                            }
+                            
                         }
 
-                            .availability-in-stock {
+                            .available-tag {
+                                display: block;
+                                background: #f4bb3a;
+                                padding: 0.3333em 0.5em;
+                                text-transform: uppercase;
+                                font-size: 0.75rem;
 
+                                .availability-limited & {
+                                    background: #e81c24;
+                                    color: white;
+                                }
+                                .availability-unavailable & {
+                                    background: #777;
+                                    color: white;
+
+                                }
+                                .availability-preorder & {
+                                    background: #53acb4;
+                                    color: white;
+
+                                }
                             }
 
-                                .available-tag {
-
+                            .available-duration {
+                                display: none;
+                                padding: 0.25em;
+                                font-size: 0.75rem;
+                                .availability-in-stock & {
+                                    display: block;
                                 }
-
-                                .available-duration {
-                                    display: none;
-                                    .availability-in-stock & {
-                                        display: block;
-                                    }
-                        
-                                }
+                    
+                            }
 
                         .discount {
                             display: none;
+                            position: absolute;
+                            right: 0;
+                            top: 0.5rem;
+                            padding: 0.25em 0.5em;
+                            background: #ff6e40;
+                            color: white;
+                            
                             .discounted & {
                                 display: block;
+                            }
+                            @media (min-width: 650px) {
+                                right: -0.5rem;
                             }
 
                         }
 
     .footer {
+        display: block;
+        padding-bottom: 1px;
+        background: #eee;
+        border-top: 1px solid #ddd;
 
     }
 
+        .footer-container {
+            max-width: 86rem;
+            margin: auto;
+            @media (min-width: 820px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                    "links misc newsletter"
+                    "contact payment security"
+                    "copyright copyright copyright";
+            }
+            @media (min-width: 1080px) {
+                column-gap: clamp(2rem, 3vw, 4rem);
+                row-gap: 1em;
+            }
+
+            
+        }
+
+            .footer-section {
+                display: block;
+                
+            }
+
+                .footer-links {
+                    grid-area: links;
+                    @media (min-width: 500px) {
+                        float: left;
+                        width: 50%;
+                    }
+                    @media (min-width: 820px) {
+                        float: none;
+                        width: auto;
+                    }
+                }
+
+                    .footer-title {
+                        display: block;
+                        font-size: 1rem;
+                        padding: 0 1em;
+                        margin: 2em 0 1em;
+                        @media (min-width: 1100px) {
+                            font-size: 1.5em;
+                            line-height: 1.5em;
+                            margin: 1.3333em 0 0.666em;
+                            padding: 0 0.5em;
+                        }
+                    }
+
+                    .footer-links-list {
+                        display: block;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        .footer-copy & {
+                            @media (min-width: 700px) {
+                                display: flex;
+                                flex-direction: row;
+                                font-size: 0.75rem;
+                                line-height: 1.5em;
+                            }
+                            @media (min-width: 990px) {
+                                width: 33.3333%;
+                            }
+                        }
+                    }
+
+                        .footer-links-items {
+                            display: block;
+                        }
+
+                            .footer-link {
+                                display: block;
+                                position: relative;
+                                border-top: 1px solid white;
+                                border-bottom: 1px solid #ddd;
+                                padding: 0.5em 1em;
+                                text-transform: uppercase;
+                                color: #555;
+                                text-decoration: none;
+                                &:after {
+                                    content: '\203A';
+                                    display: block;
+                                    position: absolute;
+                                    font-size: 2em;
+                                    padding: 0.25em;
+                                    right: 0;
+                                    top: 0;
+                                    line-height: 0.5em;
+                                }
+                                &:hover{
+                                    background: #ddd;
+                                    color:#000;
+                                }
+                                .footer-copy & {
+                                    @media (min-width: 700px) {
+                                        border: none;
+                                        padding: 1em;
+                                        text-transform: none;
+                                        color: #799900;
+                                        white-space: nowrap;
+                                            &:after {
+                                                display: none;
+
+                                            }
+                                    }
+                                }
+                            }
+
+                .footer-misc {
+                    grid-area: misc;
+                    @media (min-width:500px) {
+                        overflow: hidden;
+                    }
+                    @media (min-width:820px) {
+                        overflow: hidden;
+                    }
+                }
+
+                    .footer-paragraph {
+                        display: block;
+                        padding: 0 1em;
+                        .footer-copy & {
+                            @media (min-width: 700px) {
+                                font-size: 0.75rem;
+                                line-height: 1.5em;
+                            }
+                            @media (min-width: 990px) {
+                                width: 100%;
+                                text-align: right;
+                            }
+                            
+                        }
+                    }
+
+                    .footer-social-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0 1em;
+                    }
+
+                        .footer-social-item {
+                            display: block;
+                            margin: 0 1rem 1rem 0;
+                        }
+
+                            .footer-social-link {
+                                display: block;
+                                padding: 0.25rem;
+                                background: #ccc;
+                                border-radius: 0.25rem;
+                                &:hover {
+                                    background: #799900;
+                                }
+                            }
+
+                                .footer-social-link svg {
+                                    display: block;
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    & * {
+                                        fill: white;
+                                    }
+                                }
+
+                .footer-newsletter {
+                    grid-area: newsletter;
+                    clear: both;
+                    @media (min-width:500px) {
+                        padding-top: 1px;
+                    }
+                    @media (min-width: 820px) {
+                        padding-top: 0;
+                        
+                        
+                    }
+                }
+
+                    .footer-newsletter-form {
+                        display: block;
+                        padding: 0 1em;
+                    }
+
+                        .newletter-label {
+                            display: block;
+                            padding: 0 0 1em;
+                        }
+
+                            .newsletter-label-text {
+
+                            }
+
+                            .newsletter-input {
+
+                            }
+
+                        .newsletter-submit {
+                            display: block;
+                            padding: 1em;
+                            background: #799900;
+                            color: white;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            border: none;
+                            width: 100%;
+                            cursor: pointer;
+                            border-radius: 1em;
+                            &:hover{
+                                color: white;
+                                background: black;
+                            }
+                        }
+
+                .footer-contact {
+                    grid-area: contact;
+                    
+                }
+
+                .footer-payment {
+                    grid-area: payment;
+                    
+                }
+
+                .footer-security {
+                    grid-area: security;
+                   
+                }
+
+                .footer-copy {
+                    grid-area: copyright;
+                    
+                    @media (min-width: 700px) {
+                        display: flex;
+                        flex-direction: row;
+                        border-top: 1px solid #ddd;       
+                    }
+
+                }
 /***********************/
 
 

@@ -7,11 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- SEO -->
-        <title></title>
+        <title>Carturesti</title>
         <meta name="robots" content="index, follow, max-image-preview:large, 
         max-snippet:-1, max-video-preview:-1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
+        <meta name="description" content="Proiect demonstrativ">
         <link rel="canonical" href="">
         <meta property="og:title" content="Proiect de layout complex - Cărturești Homepage">
         <meta property="og:description" content="Proiect demonstrativ care urmărește crearea unui layout complex în HTML și CSS cu model de design homepage-ul Cărturești.ro">
@@ -71,9 +71,9 @@
                         <legend class="legend screen-readers">Cauta pe site-ul Carturesti</legend>
                         <label class="label search-label">
                             <span class="search-label-text screen-readers">Introdu textul cautat aici:</span>
-                            <input class="input search-input" placeholder="Cauta..." type="search" maxlength="200">
+                            <input class="input search-input" placeholder="Cauta..." type="search" maxlength="200" id="s" name="s">
                         </label>
-                        <button class="submitbutton search-submit">
+                        <button class="submitbutton search-submit" type="submit">
                             <img src="./resources/icon-search.svg" class="search-submit-image" alt="Cauta pe Carturesti acum"
                             width="24" height="24">
                         </button>
@@ -135,15 +135,15 @@
             <main class="main">
                 <section class="slider">
                     <nav class="slider-controls">
-                        <a class="slider-arrows slider-prev" href="#" title="Revino la imaginea precedenta">
+                        <a id="previous-slide" class="slider-arrows slider-prev" href="#" title="Revino la imaginea precedenta">
                             <img src="./resources/icon-arrow.svg" class="slider-arrow-image" alt="Imaginea precedenta"
                             width="48" height="82">
                         </a>
-                        <a class="slider-arrows slider-next" href="#" title="Mergi la imaginea urmatoare">
+                        <a id="next-slide" class="slider-arrows slider-next" href="#" title="Mergi la imaginea urmatoare">
                             <img src="./resources/icon-arrow.svg" class="slider-arrow-image" alt="Imaginea precedenta"
                             width="48" height="82">
                         </a>
-                        <ol class="slider-picker">
+                        <ol id="slider-picker" class="slider-picker">
                             <li class="slider-picker-item active">
                                 <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
                                     <span class="slider-picker-text">Imaginea @TODO</span>
@@ -159,102 +159,33 @@
                                     <span class="slider-picker-text">Imaginea @TODO</span>
                                 </a>
                             </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-                            <li class="slider-picker-item">
-                                <a class="slider-picker-link" href="#" title="Mergi la imaginea cu nr x">
-                                    <span class="slider-picker-text">Imaginea @TODO</span>
-                                </a>
-                            </li>
-
                         </ol>
                     </nav>
-                    <ol class="slider-list">
+                    <ol id="sliderList" class="slider-list">
                         <li class="slider-item active">
-                            <a href="#" class="slider-link">
+                            <a href="#" class="slider-link" title="vezi articolul despre">
                                 <picture class="slider-image">
-                                    <source type="image/webp" srcset="
-                                    ./images/slider-img-1-mobile.webp 525w,
-                                    ./images/slider-img-1.webp 1170w
-                                    " sizes="
-                                    (max-width: 749px) 525px,
-                                    (min-width: 750px) 1170px
-                                    ">
-                                    <img srcset="
-                                    ./images/slider-img-1-mobile.png 525w,
-                                    ./images/slider-img-1.png 1170w
-                                    " sizes="
-                                    (max-width: 749px) 525px,
-                                    (min-width: 750px) 1170px
-                                    " src="./images/slider-img-1-mobile.png" alt="Imagine despre" 
-                                    loading="lazy" decoding="async" width="525" height="300" itemprop="image">
-
+                                    <source type="image/webp" srcset="./images/slider-img-1.webp" media="(min-width: 750px)" >
+                                    <source type="image/webp" srcset="./images/slider-img-1-mobile.webp" media="(min-width: 100px)" >
+                                    <img srcset="./images/slider-img-1-mobile.png" alt="Imagine despre" width="525" height="300" itemprop="image">
                                 </picture>
-                                
                             </a>
                         </li>
                         <li class="slider-item">
                             <a href="#" class="slider-link">
                                 <picture class="slider-image">
-                                    <source type="image/webp" srcset="
-                                    ./images/slider-img-1-mobile.webp 525w,
-                                    ./images/slider-img-1.webp 1170w
-                                    " sizes="
-                                    (max-width: 749px) 525px,
-                                    (min-width: 750px) 1170px
-                                    ">
-                                    <img srcset="
-                                    ./images/slider-img-1-mobile.png 525w,
-                                    ./images/slider-img-1.png 1170w
-                                    " sizes="
-                                    (max-width: 749px) 525px,
-                                    (min-width: 750px) 1170px
-                                    " src="./images/slider-img-1-mobile.png" alt="Imagine despre" 
-                                    loading="lazy" decoding="async" width="525" height="300" itemprop="image">
-
+                                    <source type="image/webp" srcset="./images/slider-img-2.webp" media="(min-width: 750px)" >
+                                    <source type="image/webp" srcset="./images/slider-img-2-mobile.webp" media="(min-width: 100px)" >
+                                    <img srcset="./images/slider-img-2-mobile.jpg" alt="Imagine despre" width="525" height="300" itemprop="image">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="slider-item">
+                            <a href="#" class="slider-link">
+                                <picture class="slider-image">
+                                    <source type="image/webp" srcset="./images/slider-img-3.webp" media="(min-width: 750px)" >
+                                    <source type="image/webp" srcset="./images/slider-img-3-mobile.webp" media="(min-width: 100px)" >
+                                    <img srcset="./images/slider-img-3-mobile.jpg" alt="Imagine despre" width="525" height="300" itemprop="image">
                                 </picture>
                             </a>
                         </li>
@@ -306,204 +237,244 @@
                 <section class="book-grid">
                     <h2 class="book-grid-title">Precomenzi</h2>
                     <ol class="book-grid-list">
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item discounted availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability ">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration" title="Daca faci azi comanda, vei avea careta in 24h"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item availability-preorder" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/BackOrder">
+                                        <span class="available-tag">Precomanda</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item availability-limited" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/LimitedAvailability">
+                                        <span class="available-tag"><span class="screen-readers">Stoc </span>Limitat</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item availability-unavailable" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability ">
+                                        <link itemprop="availability" href="https://schema.org/OutOfStock">
+                                        <span class="available-tag">Indisponibil</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item discounted availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item discounted availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item discounted availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                    </div>
                             </a>
                         </li>
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item discounted availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="book-grid-item discounted">
-                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea">
-                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii">
-                                <h3 class="book-title">Information Architecture, 4e</h3>
-                                <h4 class="book-author">Louis Rosenfeld & co.</h4>
-                                <p class="book-description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
-                                <span class="price">
-                                    <span>
-                                        <strong>52</strong>
-                                        <span>.00</span>
+                        <li class="book-grid-item discounted availability-in-stock" itemscope="" itemtype="https://schema.org/Book">
+                            <link itemprop="additionalType" href="https://schema.org/Product"/>
+                            <a class="book-grid-link" href="#" title="vezi pag cu detalii pt cartea" itemprop="url">
+                                <img class="book-grid-thumbnail" src="images/carte.webp"  width="300" height="451" alt="coperta cartii" itemprop="image">
+                                <h3 class="book-title" itemprop="name">Information Architecture, 4e</h3>
+                                <h4 class="book-author" itemprop="author">Louis Rosenfeld & co.</h4>
+                                <p class="book-description" itemprop="description">To guide you through this broad ecosystem, this popular guide provides essential concepts, methods, and techniques for digital design that have withstood the test of time. UX designers, product managers, developers, and anyone involved in digital design will learn how to create semantic structures that will help people engage with your message.</p>
+                                <div class="offer" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price">
+                                        <span>
+                                            <strong>52</strong>
+                                            <span>.00</span>
+                                        </span>
+                                            <span>lei</span>
                                     </span>
-                                        <span>lei</span>
-                                </span>
-                                <span class="availability availability-in-stock">
-                                    <span class="available-tag">In stoc</span>
-                                    <span class="available-duration"><strong>24h</strong></span>
-                                </span>
-                                <span class="discount">-10%</span>
+                                    <span class="availability">
+                                        <link itemprop="availability" href="https://schema.org/InStock">
+                                        <span class="available-tag">In stoc</span>
+                                        <span class="available-duration"><strong>24h</strong></span>
+                                    </span>
+                                    <span class="discount">-10%</span>
+                                </div>
                             </a>
                         </li>
                     </ol>
@@ -511,7 +482,129 @@
             </main>
             
             <footer class="footer">
-
+                <div class="footer-container">
+                    <section class="footer-section footer-links">
+                        <h2 class="footer-title">Linkuri utile</h2>
+                        <ul class="footer-links-list">
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Despre CARTURESTI.RO</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Despre CARTURESTI</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Joburi</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Asistenta</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Livrare in librarie</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Costuri de transport</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Politica de confidentialiate</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="">Politica de retur</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="footer-section footer-misc">
+                        <h2 class="footer-title">Livrare gratuita</h2>
+                        <p class="footer-paragraph">pentru comenzi peste 150 de lei dacă toate produsele pot fi livrate într-un singur colet.</p>
+                        <h2 class="footer-title">Follow us</h2>
+                        <ul class="footer-social-list">
+                            <li class="footer-social-item">
+                                <a class="footer-social-link" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z"></path>
+                                    </svg>
+                                    <span class="screen-readers">Pagina de Facebook a Cărtureștiului</span>
+                                </a>
+                            </li>
+                            <li class="footer-social-item">
+                                <a class="footer-social-link" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)" d="M17.71,9.33C17.64,13.95 14.69,17.11 10.28, 17.31C8.46,17.39 7.15,16.81 6,16.08C7.34,16.29 9,15.76 9.9,15C8.58,14.86 7.81,14.19 7.44,13.12C7.82,13.18 8.22,13.16 8.58,13.09C7.39,12.69 6.54,11.95 6.5,10.41C6.83,10.57 7.18,10.71 7.64,10.74C6.75,10.23 6.1,8.38 6.85,7.16C8.17,8.61 9.76,9.79 12.37,9.95C11.71,7.15 15.42,5.63 16.97,7.5C17.63,7.38 18.16,7.14 18.68,6.86C18.47,7.5 18.06,7.97 17.56,8.33C18.1,8.26 18.59,8.13 19,7.92C18.75,8.45 18.19,8.93 17.71,9.33M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z"></path>
+                                    </svg>
+                                    <span class="screen-readers">Profilul de Twitter al Cărtureștiului</span>
+                                </a>
+                            </li>
+                            <li class="footer-social-item">
+                                <a class="footer-social-link" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z"></path>
+                                    </svg>
+                                    <span class="screen-readers">Canalul de YouTube al Cărtureștiului</span>
+                                </a>
+                            </li>
+                            <li class="footer-social-item">
+                                <a class="footer-social-link" href="#">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="rgba(255,255,255,.85)" d="M20,6.5A0.5,0.5 0 0,1 19.5,7H17.5A0.5,0.5 0 0,1 17,6.5V4.5A0.5,0.5 0 0,1 17.5,4H19.5A0.5,0.5 0 0,1 20,4.5M4.5,20A0.5,0.5 0 0,1 4,19.5V11H6.09C6.03,11.32 6,11.66 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12C18,11.66 17.96,11.32 17.91, 11H20V19.5A0.5,0.5 0 0,1 19.5,20M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z"></path>
+                                    </svg>
+                                    <span class="screen-readers">Profilul de Instagram al Cărtureștiului</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="footer-section footer-newsletter">
+                        <h2 class="footer-title">Aboneaza-te la newsletter</h2>
+                        <p class="footer-paragraph">Primește promoții, noutăți și oferte personalizate direct în Inbox</p>
+                        <form class="form footer-newsletter-form" id="footer-newsletter-form" action="#" method="post">
+                            <fildset class="fieldset">
+                                <legend class="legend screen-readers">Da-ne datele tale</legend>
+                                <label class="label newletter-label">
+                                    <span class="newsletter-label-text">Adresa ta de e-mail</span>
+                                    <input class="input newsletter-input" placeholder="Mail..." type="email" maxlength="200" required="required" id="newsletter-email" name="newsletter-email">
+                                </label>
+                                <label class="label newletter-label">
+                                    <span class="newsletter-label-text">Prenume</span>
+                                    <input class="input newsletter-input" placeholder="Prenume..." type="email" maxlength="200" required="required" id="newsletter-firstname" name="newsletter-firstname">
+                                </label>
+                                <label class="label newletter-label">
+                                    <span class="newsletter-label-text">Nume</span>
+                                    <input class="input newsletter-input" placeholder="Nume..." type="email" maxlength="200" required="required" id="newsletter-lastname" name="newsletter-lastname">
+                                </label>
+                                <button class="submit-button newsletter-submit" type="submit">
+                                    <span>Aboneaza-te acum &raquo;</span>
+                                </button>
+                            </fildset>
+                        </form>
+                    </section>
+                    <section class="footer-section footer-contact">
+                        <h2 class="footer-title">Asistenta telefonica</h2>
+                        <p class="footer-paragraph">Suport comenzi și ofertă online</p>
+                        <p class="footer-paragraph">Luni - Vineri: 9:00 - 20:00<br>
+                            Sâmbătă - Duminică: 10:00 - 18:00</p>
+                        <p class="footer-paragraph">tel.: <a href="tel:0040376448000">0376 448 000</a></p>
+                    </section>
+                    <section class="footer-section footer-payment">
+                        <h2 class="footer-title">Optiuni de plata</h2>
+                        <p class="footer-paragraph">Acceptam bani</p>
+                    </section>
+                    <section class="footer-section footer-security">
+                        <h2 class="footer-title">Shooping securizat</h2>
+                        <p class="footer-paragraph">Probabil</p>
+                    </section>
+                    <section class="footer-section footer-copy">
+                        <ul class="footer-links-list">
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="Citește detalii despre termenii și condițiile de folosire a site-ului">Termeni &amp; condiții</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="Citește detalii despre politica de confidențialitate și folosire a cookie-urilor pe site">Politică Cookie-uri</a>
+                            </li>
+                            <li class="footer-links-items">
+                                <a class="footer-link" href="#" title="Mergi pe site-ul ANPC dacă ai nevoie să depui o plângere">ANPC</a>
+                            </li>
+                        </ul>
+                        <p class="footer-paragraph">© Carturesti 2021 | ® Conținut cu drepturi protejate<br /> Acest proiect are pur scop educațional și nu este menit să aducă vreun detriment brand-ului Cărturești sau site-ului <a href="https://www.carturesti.ro">Cărturești.ro</a>.</p>
+                    </section>
+                </div>
             </footer>
         </div>
         <script defer src="resources/script.js"></script>
